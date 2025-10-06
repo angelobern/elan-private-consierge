@@ -3,177 +3,213 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Packs ÉLAN Concierge</title>
+  <title>ÉLAN Private Concierge</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #0d0d0d;
+      --gold: #d4af37;
+      --text: #f2f2f2;
+      --muted: #999;
+      --card: #141414;
+      --border: #222;
+    }
     body {
-      background-color: #0d0d0d;
-      color: #f2f2f2;
+      background: var(--bg);
+      color: var(--text);
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
     }
+
     header {
       text-align: center;
-      padding: 40px 20px 20px 20px;
-      border-bottom: 1px solid #222;
+      padding: 80px 20px 60px;
+      border-bottom: 1px solid var(--border);
+      background: radial-gradient(1000px 520px at 50% -10%, rgba(0,0,0,.55), rgba(0,0,0,.88)), url('elan-hero.jpg') center/cover no-repeat;
     }
     .logo {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
-      font-size: 40px;
+      font-size: 60px;
       letter-spacing: 0.1em;
-      color: #d4af37;
+      color: var(--gold);
+      margin: 0;
     }
     header p {
+      color: var(--muted);
+      font-size: 16px;
       margin-top: 6px;
-      color: #ddd;
-      opacity: 0.9;
-      font-size: 15px;
     }
-    main {
-      text-align: center;
-      padding: 40px 20px 80px;
-    }
-    h1 {
-      color: #d4af37;
-      font-family: 'Playfair Display', serif;
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
-    p.intro {
-      font-size: 18px;
-      color: #ccc;
-      max-width: 600px;
-      margin: 0 auto 40px;
-    }
+
     .btns {
+      margin-top: 30px;
       display: flex;
       justify-content: center;
-      gap: 15px;
-      margin-bottom: 50px;
       flex-wrap: wrap;
+      gap: 15px;
     }
     a.btn {
       text-decoration: none;
-      color: #000;
-      background-color: #d4af37;
       padding: 12px 26px;
       border-radius: 30px;
       font-weight: 600;
       transition: all 0.3s ease;
     }
-    a.btn:hover {
+    a.btn-gold {
+      background-color: var(--gold);
+      color: #000;
+    }
+    a.btn-gold:hover {
       background-color: #b8912e;
     }
     a.btn-outline {
       background-color: transparent;
-      color: #f2f2f2;
-      border: 1px solid #555;
+      color: var(--text);
+      border: 1px solid var(--border);
     }
     a.btn-outline:hover {
       background-color: #222;
     }
-    .packs {
-      display: grid;
-      gap: 30px;
-      max-width: 900px;
+
+    main {
+      padding: 40px 20px 80px;
+      max-width: 1000px;
       margin: 0 auto;
     }
-    .pack {
-      background-color: #141414;
-      border: 1px solid #222;
-      border-radius: 16px;
-      padding: 30px 20px;
+    section {
+      margin-bottom: 60px;
+    }
+    h2 {
+      text-align: center;
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    p {
+      color: var(--text);
+      max-width: 800px;
+      margin: 0 auto 20px;
+      text-align: center;
+    }
+
+    .services {
+      display: grid;
+      gap: 30px;
+    }
+    @media (min-width: 768px) {
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
       text-align: left;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
-    .pack h2 {
-      color: #fff;
-      font-size: 22px;
-      margin-bottom: 8px;
+    .card h3 {
+      color: var(--gold);
+      margin-top: 0;
     }
-    .pack small {
-      color: #999;
-      font-size: 13px;
-    }
-    .pack strong {
-      display: block;
-      color: #d4af37;
-      font-size: 20px;
-      margin: 10px 0 15px;
-    }
-    .pack ul {
+    .card ul {
       margin: 0;
       padding-left: 18px;
       color: #ccc;
     }
-    .pack ul li {
+    .card li {
       margin-bottom: 6px;
     }
+
+    .contact {
+      text-align: center;
+    }
+    .contact p {
+      margin: 10px auto;
+    }
+
     footer {
       text-align: center;
       padding: 40px 20px;
-      color: #666;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
       font-size: 14px;
-      border-top: 1px solid #222;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">ÉLAN</div>
-    <p>Concierge</p>
+    <h1 class="logo">ÉLAN</h1>
+    <p>Private Concierge — Discrição, Precisão, Excelência</p>
+    <div class="btns">
+      <a href="packs.html" class="btn btn-gold">Ver Packs ÉLAN</a>
+      <a href="#servicos" class="btn btn-outline">Ver Serviços</a>
+    </div>
   </header>
 
   <main>
-    <h1>Packs ÉLAN</h1>
-    <p class="intro">
-      Soluções privadas de alto padrão — mais completas e <b>até 70% mais económicas</b> do que manter um mordomo ou staff fixo.
-    </p>
-    <div class="btns">
-      <a href="mailto:contact@elanconcierge.com" class="btn">Pedir proposta</a>
-      <a href="index.html" class="btn btn-outline">Voltar ao site</a>
-    </div>
+    <section id="sobre">
+      <h2>Sobre Nós</h2>
+      <p>
+        A ÉLAN é um serviço de concierge privado e gestão de propriedades de alto padrão.  
+        Cuidamos de cada detalhe com discrição, eficiência e elegância — desde a residência à rotina pessoal.  
+        Todos os serviços incluem documentação e NDA (Acordo de Confidencialidade).
+      </p>
+    </section>
 
-    <section class="packs">
-      <div class="pack">
-        <h2>Essencial</h2>
-        <small>Mais económico</small>
-        <strong>desde 650 €/mês</strong>
-        <ul>
-          <li>Inspeções semanais e relatórios mensais</li>
-          <li>Supervisão de limpeza e lavandaria</li>
-          <li>Gestão de correspondência e fornecedores</li>
-          <li>Assistência de emergência 24/7</li>
-        </ul>
+    <section id="servicos">
+      <h2>Serviços ÉLAN</h2>
+      <div class="services">
+        <div class="card">
+          <h3>Gestão de Propriedades</h3>
+          <ul>
+            <li>Inspeções e relatórios regulares</li>
+            <li>Manutenção e supervisão de obras</li>
+            <li>Casa preparada à chegada</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Assistência Pessoal</h3>
+          <ul>
+            <li>Motorista privado</li>
+            <li>Documentação e logística</li>
+            <li>Gestão de agenda</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Decoração e Remodelação</h3>
+          <ul>
+            <li>Design de interiores</li>
+            <li>Pequenas obras e reabilitação</li>
+            <li>Supervisão e controlo de qualidade</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Gestão de Lifestyle</h3>
+          <ul>
+            <li>Reservas e eventos privados</li>
+            <li>Curadoria de experiências exclusivas</li>
+            <li>Serviços personalizados sob pedido</li>
+          </ul>
+        </div>
       </div>
-
-      <div class="pack">
-        <h2>Executivo</h2>
-        <small>Mais requisitado</small>
-        <strong>desde 1 200 €/mês</strong>
-        <ul>
-          <li>Todos os serviços do plano Essencial</li>
-          <li>Gestão de hóspedes e coordenação de estadias</li>
-          <li>Motorista privado ocasional</li>
-          <li>Serviço de compras e reabastecimento</li>
-          <li>Decoração de interiores e pequenas remodelações</li>
-        </ul>
+      <div class="btns" style="margin-top:40px;">
+        <a href="packs.html" class="btn btn-gold">Ver Packs ÉLAN</a>
       </div>
+    </section>
 
-      <div class="pack">
-        <h2>Signature</h2>
-        <small>Personalizado</small>
-        <strong>sob consulta</strong>
-        <ul>
-          <li>Serviços totalmente adaptados ao estilo do cliente</li>
-          <li>Motorista exclusivo e staff dedicado</li>
-          <li>Planeamento e organização de eventos privados</li>
-          <li>Supervisão de obras, design e manutenção</li>
-          <li>Consultoria lifestyle e gestão de propriedades múltiplas</li>
-        </ul>
+    <section class="contact" id="contacto">
+      <h2>Contacto Direto</h2>
+      <p>Comunicação reservada e objetiva.</p>
+      <p><b>📞</b> +351 938 569 821</p>
+      <p><b>✉️</b> contact@elanconcierge.com</p>
+      <div class="btns">
+        <a href="mailto:contact@elanconcierge.com" class="btn btn-gold">Enviar E-mail</a>
+        <a href="https://wa.me/351938569821" class="btn btn-outline" target="_blank">WhatsApp</a>
       </div>
     </section>
   </main>
