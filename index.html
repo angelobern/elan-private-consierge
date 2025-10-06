@@ -1,168 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ÉLAN Private Concierge — The Art of Effortless Living</title>
-<meta name="description" content="ÉLAN Private Concierge. Gestão de lifestyle e propriedades com discrição, precisão e excelência." />
-
-<style>
-  :root {
-    --bg: #0b0b0b;
-    --text: #f2f2f2;
-    --gold: #d4af37;
-    --border: #222;
-  }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    line-height: 1.6;
-  }
-
-  h1, h2 {
-    text-align: center;
-    color: var(--gold);
-  }
-
-  section {
-    padding: 2rem 1.2rem;
-    max-width: 900px;
-    margin: auto;
-  }
-
-  .card {
-    background: #141414;
-    border-radius: 14px;
-    padding: 1.2rem;
-    margin-top: 1rem;
-    border: 1px solid var(--border);
-  }
-
-  .img-card {
-    border-radius: 14px;
-    overflow: hidden;
-    margin-top: 1rem;
-  }
-
-  .img-cover {
-    border-radius: 14px;
-    border: 1px solid var(--border);
-    min-height: 240px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  /* 🔧 Correção do enquadramento e ocultação do texto "Lifestyle" */
-  .img-services {
-    background-image:
-      linear-gradient(90deg, rgba(11,11,11,0.95) 0 28%, rgba(11,11,11,0) 42%),
-      url('elan-services.jpg');
-    background-position: left center, 85% 50%;
-    background-size: auto, 165%;
-    background-repeat: no-repeat, no-repeat;
-  }
-
-  @media (min-width: 780px) {
-    .img-services {
-      background-position: left center, 80% 50%;
-      background-size: auto, 145%;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ÉLAN Private Concierge</title>
+  <meta name="description" content="Gestão de lifestyle e propriedades com discrição, precisão e excelência.">
+  <style>
+    :root {
+      --bg: #000;
+      --text: #f5f5f5;
+      --gold: #d4af37;
+      --gray: #444;
+      --r: 14px;
     }
-  }
-
-  @media (max-width: 600px) {
-    .img-cover { min-height: 340px; }
-    .img-services {
-      background-position: left center, 88% 35%;
-      background-size: auto, 195%;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Poppins", Arial, sans-serif;
+      line-height: 1.6;
     }
-  }
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+    header h1 {
+      font-size: 2.8em;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    header p {
+      color: var(--gray);
+      font-style: italic;
+    }
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    h2 {
+      color: var(--gold);
+      font-size: 1.9em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    p {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 1.05em;
+    }
 
-  .img-locations {
-    background-image: url('elan-locations.jpg');
-    background-position: 50% 35%;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+    /* CARTÕES E IMAGENS */
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .card {
+      background: #111;
+      border-radius: var(--r);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--r);
+      display: block;
+      object-fit: cover;
+    }
 
-  footer {
-    text-align: center;
-    font-size: 0.85rem;
-    padding: 2rem 0;
-    color: #aaa;
-  }
+    /* FIX: não cortar imagem */
+    .img-card { overflow: visible; }
 
-  a {
-    color: var(--gold);
-    text-decoration: none;
-  }
+    /* RESPONSIVO */
+    @media (min-width: 700px) {
+      .cards { flex-direction: row; }
+      .card { flex: 1; }
+    }
 
-  .contact-box {
-    background: #141414;
-    padding: 1.2rem;
-    border-radius: 14px;
-    border: 1px solid var(--border);
-    text-align: left;
-  }
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 0.9em;
+      padding: 30px 10px;
+      border-top: 1px solid #222;
+    }
 
-  .contact-box a {
-    display: inline-block;
-    margin-top: 6px;
-    font-weight: 500;
-  }
-</style>
+    a { color: var(--gold); text-decoration: none; }
+  </style>
 </head>
-
 <body>
+
+  <header>
+    <h1>ÉLAN Private Concierge</h1>
+    <p>The Art of Effortless Living</p>
+  </header>
+
   <main>
+
     <section>
-      <h1>Sobre Nós</h1>
+      <h2>Sobre Nós</h2>
       <p>Serviço de concierge e lifestyle com foco em <strong>discrição, precisão e excelência</strong>. 
       Cuidamos de viagens, propriedades e experiências personalizadas em Portugal e Espanha.</p>
 
-      <div class="img-card">
-        <div class="img-cover img-services" role="img" aria-label="Lifestyle premium e serviços personalizados"></div>
+      <div class="cards">
+        <div class="card">
+          <ul>
+            <li>Gestão de propriedades e manutenção</li>
+            <li>Transfers e viagens premium</li>
+            <li>Eventos e experiências sob medida</li>
+            <li>Assistência 24/7 com sigilo absoluto</li>
+          </ul>
+        </div>
+        <div class="card img-card">
+          <img src="elan-hero.jpg" alt="Propriedades e estilo de vida premium em Portugal e Espanha">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Lifestyle</h2>
+      <div class="cards">
+        <div class="card img-card">
+          <img src="elan-services.jpg" alt="Experiências exclusivas e requinte">
+        </div>
+        <div class="card">
+          <p>Vivencie um estilo de vida marcado pela elegância, conforto e discrição. 
+          Tratamos de todos os detalhes para que viva experiências únicas, com tranquilidade e sofisticação.</p>
+        </div>
       </div>
     </section>
 
     <section>
       <h2>Serviços</h2>
-      <div class="card">
-        <ul>
-          <li>Gestão de propriedades, check-in/out e manutenção</li>
-          <li>Viagens, transfers e reservas premium</li>
-          <li>Eventos discretos e experiências sob medida</li>
-          <li>Assistência 24/7 com sigilo absoluto</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <h2>Localizações</h2>
-      <p>Atuamos em <strong>Portugal</strong> e <strong>Espanha</strong>, oferecendo um serviço personalizado em cada destino.</p>
-      <div class="img-card">
-        <div class="img-cover img-locations" role="img" aria-label="Portugal e Espanha — destinos ÉLAN"></div>
-      </div>
+      <p>Gestão de propriedades, check-in/out, manutenção, transfers, reservas premium e experiências personalizadas.</p>
     </section>
 
     <section>
       <h2>Contacto Direto</h2>
-      <div class="contact-box">
-        <p>Preferimos comunicação reservada e objetiva.</p>
-        <p>📞 Telefone / WhatsApp: <a href="https://wa.me/351938569821" target="_blank">+351 938 569 821</a></p>
-        <p>📧 Email: <a href="mailto:contact@elanconcierge.com">contact@elanconcierge.com</a></p>
-        <a href="mailto:contact@elanconcierge.com">Enviar e-mail</a> ·
-        <a href="https://wa.me/351938569821" target="_blank">Falar no WhatsApp</a> ·
-        <a href="tel:+351938569821">Ligar agora</a>
-      </div>
+      <p>Telefone / WhatsApp: <a href="https://wa.me/351938569821" target="_blank">+351 938 569 821</a></p>
+      <p>Email: <a href="mailto:contact@elanconcierge.com">contact@elanconcierge.com</a></p>
     </section>
 
-    <footer>
-      © ÉLAN Private Concierge — Discrição • Precisão • Excelência
-    </footer>
   </main>
+
+  <footer>© ÉLAN Private Concierge — Discrição • Precisão • Excelência</footer>
+
 </body>
 </html>
