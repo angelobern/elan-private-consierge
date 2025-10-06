@@ -4,84 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ÉLAN Private Concierge — Discrição, Precisão, Excelência</title>
-  <meta name="description" content="Concierge privado e gestão de lifestyle/propriedades em Portugal e Espanha. Discrição absoluta, execução precisa, resultados elegantes.">
+  <meta name="description" content="Concierge e lifestyle de luxo em Portugal e Espanha. Discrição absoluta, execução precisa e experiências sob medida.">
   <meta name="theme-color" content="#0b0b0b">
-  <!-- Open Graph -->
-  <meta property="og:title" content="ÉLAN Private Concierge">
-  <meta property="og:description" content="The Art of Effortless Living. Concierge privado com sigilo absoluto.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://angelobern.github.io/elan-private-consierge/">
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#0b0b0b; --panel:#121212; --card:#161616; --border:#242424;
-      --text:#e9e9e9; --muted:#a6a6a6;
-      --gold:#d4af37; --gold-2:#b9972e;
-      --radius:18px; --shadow:0 10px 32px rgba(0,0,0,.4)
+      --text:#e9e9e9; --muted:#a6a6a6; --gold:#d4af37; --gold2:#b9972e;
+      --r:18px; --shadow:0 10px 32px rgba(0,0,0,.45)
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;background:var(--bg);color:var(--text);font-family:Montserrat,system-ui,Arial}
     a{color:var(--gold);text-decoration:none}
-    img{max-width:100%;display:block}
-    /* NAV */
+    .wrap{max-width:1120px;margin:0 auto;padding:28px}
+
     .nav{position:sticky;top:0;z-index:50;background:rgba(11,11,11,.7);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 24px}
+    .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 28px}
     .brand{font-family:"Playfair Display",serif;letter-spacing:.18em;font-weight:700;color:var(--gold)}
-    .brand span{color:#fff;letter-spacing:.06em;margin-left:8px;font-family:Montserrat;font-weight:800}
+    .brand span{color:#fff;margin-left:8px;font-weight:800;letter-spacing:.06em}
     .menu{display:flex;gap:18px;flex-wrap:wrap}
     .menu a{color:#ddd;font-weight:600}
     .menu a:hover{color:#fff}
     .btn{padding:10px 16px;border-radius:999px;border:1px solid var(--border);background:var(--card);color:var(--text)}
-    .btn--gold{background:linear-gradient(180deg,var(--gold),var(--gold-2));color:#111;border:0;font-weight:800}
-    /* HERO */
-    .hero{min-height:72vh;display:grid;place-items:center;text-align:center;padding:84px 20px;background:
-      radial-gradient(1000px 480px at 50% -10%, #1a1a1a 0%, #0b0b0b 65%)}
+    .btn--gold{background:linear-gradient(180deg,var(--gold),var(--gold2));color:#111;border:0;font-weight:800}
+
+    .hero{
+      min-height:78vh; display:grid; place-items:center; text-align:center; padding:84px 20px 60px;
+      background: radial-gradient(1000px 520px at 50% -10%, rgba(0,0,0,.55), rgba(0,0,0,.85)),
+                  url('elan-hero.jpg') center/cover no-repeat fixed;
+    }
     .kicker{display:inline-block;padding:6px 12px;border:1px solid var(--border);
-      border-radius:999px;color:var(--muted);letter-spacing:.12em;font-size:.82rem}
+      border-radius:999px;color:#dcdcdc;letter-spacing:.12em;font-size:.82rem;background:rgba(0,0,0,.35)}
     .logo{font-family:"Playfair Display",serif;font-weight:700;font-size:68px;letter-spacing:.18em;margin:18px 0 6px;color:var(--gold)}
     .subtitle{font-weight:600;color:var(--gold);letter-spacing:.06em}
     .hero .actions{margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-    /* LAYOUT */
-    .wrap{max-width:1120px;margin:0 auto;padding:28px}
-    section{margin:32px 0}
+
+    section{margin:34px 0}
     .section-title{font-size:28px;margin:0 0 12px 0}
-    .panel{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
+    .panel{background:var(--panel);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);padding:22px}
     .grid{display:grid;gap:18px}
     @media(min-width:780px){ .grid-2{grid-template-columns:1fr 1fr} .grid-3{grid-template-columns:repeat(3,1fr)} }
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:22px}
     .card h3{margin:0 0 8px}
-    p{margin:0 0 14px;color:var(--muted);line-height:1.7}
-    ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.7}
-    .badge{display:inline-block;border:1px solid var(--border);border-radius:10px;padding:6px 10px;color:var(--muted)}
-    blockquote{margin:0;color:#cfcfcf;font-style:italic}
-    /* FOOTER */
-    footer{margin:40px 0 28px;text-align:center;color:#8a8a8a}
-    /* accessibility */
-    @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+    p{margin:0 0 14px;color:#cfcfcf;line-height:1.7}
+    ul{margin:0;padding-left:18px;color:#cfcfcf;line-height:1.7}
+    .img-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}
+
+    footer{margin:42px 0 28px;text-align:center;color:#8a8a8a}
   </style>
 </head>
 <body>
-  <!-- NAV -->
-  <nav class="nav" aria-label="Principal">
+  <nav class="nav">
     <div class="wrap">
       <div class="brand">ÉLAN<span>CONCIERGE</span></div>
       <div class="menu">
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
-        <a href="#porquê">Porquê a ÉLAN</a>
-        <a href="#processo">Processo</a>
-        <a href="#local">Localizações</a>
+        <a href="#destinos">Destinos</a>
         <a href="#contacto">Contacto</a>
         <a class="btn btn--gold" href="#contacto">Contactar</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
   <header class="hero">
     <div>
       <div class="kicker">Private • Discreet • Precise</div>
@@ -95,31 +83,27 @@
   </header>
 
   <main class="wrap">
-
-    <!-- SOBRE -->
     <section id="sobre" class="panel">
       <div class="grid grid-2">
         <div class="card">
           <h2 class="section-title">Sobre nós</h2>
-          <p>Concierge privado e gestão de lifestyle focados em três pilares: <strong>discrição</strong>, <strong>precisão</strong> e <strong>excelência</strong>. Cuidamos de viagens, propriedades e experiências feitas à medida, em Portugal e Espanha.</p>
+          <p>Serviço de <strong>concierge e lifestyle</strong> com foco absoluto em <strong>discrição</strong>, <strong>precisão</strong> e <strong>excelência</strong>. Cuidamos de cada detalhe — viagens, propriedades, experiências e reservas premium — com total sigilo e personalização. Atuamos em <strong>Portugal</strong> e <strong>Espanha</strong>.</p>
         </div>
-        <div class="card">
-          <h2 class="section-title">Para quem</h2>
-          <p>Clientes privados, executivos e proprietários internacionais que valorizam tempo, conforto e sigilo absoluto. NDAs disponíveis quando necessário.</p>
+        <div class="img-card">
+          <img src="elan-services.jpg" alt="Lifestyle premium: viagens, propriedades e experiências" loading="lazy">
         </div>
       </div>
     </section>
 
-    <!-- SERVIÇOS -->
     <section id="servicos">
       <h2 class="section-title">Serviços</h2>
       <div class="grid grid-3">
         <div class="card">
           <h3>Gestão de Propriedades</h3>
           <ul>
-            <li>Check-in/out, inspeções e manutenção preventiva</li>
+            <li>Check-in/out, inspeções e manutenção</li>
             <li>Supervisão de fornecedores e obras</li>
-            <li>Preparação de estadias e serviço “chave-na-mão”</li>
+            <li>Preparação de estadias “chave-na-mão”</li>
           </ul>
         </div>
         <div class="card">
@@ -127,7 +111,7 @@
           <ul>
             <li>Transfers, motoristas e segurança</li>
             <li>Reservas premium e soluções last-minute</li>
-            <li>Roteiros personalizados e serviços pessoais</li>
+            <li>Roteiros personalizados</li>
           </ul>
         </div>
         <div class="card">
@@ -141,67 +125,29 @@
       </div>
     </section>
 
-    <!-- PORQUÊ A ÉLAN -->
-    <section id="porquê" class="panel">
-      <h2 class="section-title">Porquê a ÉLAN</h2>
-      <div class="grid grid-3">
-        <div class="card"><span class="badge">#1</span><h3>Discrição real</h3><p>Fluxos e comunicação desenhados para minimizar exposição. Registo mínimo de dados.</p></div>
-        <div class="card"><span class="badge">#2</span><h3>Execução precisa</h3><p>Planeamento, confirmação e acompanhamento ponto a ponto, sempre com reporting claro.</p></div>
-        <div class="card"><span class="badge">#3</span><h3>Rede de confiança</h3><p>Parceiros verificados nas principais capitais e no Algarve, com SLA e padrões de qualidade.</p></div>
+    <section id="destinos" class="panel">
+      <h2 class="section-title">Destinos</h2>
+      <div class="img-card">
+        <img src="elan-locations.jpg" alt="Portugal e Espanha — destinos ÉLAN" loading="lazy">
+      </div>
+      <p style="margin-top:12px">Base no <strong>Algarve</strong> e em <strong>Lisboa</strong>. Operação nacional e Espanha (Andaluzia, Madrid, Barcelona e Baleares).</p>
+    </section>
+
+    <section id="contacto" class="panel">
+      <h2 class="section-title">Contacto direto</h2>
+      <p>Preferimos comunicação reservada e objetiva.</p>
+      <p>
+        📞 Telefone / WhatsApp:
+        <a href="https://wa.me/351938569821" target="_blank" rel="noopener">+351 938 569 821</a><br>
+        ✉️ Email:
+        <a href="mailto:contact@elanconcierge.com">contact@elanconcierge.com</a>
+      </p>
+      <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn--gold" href="mailto:contact@elanconcierge.com">Enviar e-mail</a>
+        <a class="btn" href="https://wa.me/351938569821" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <a class="btn" href="tel:+351938569821">Ligar agora</a>
       </div>
     </section>
-
-    <!-- PROCESSO -->
-    <section id="processo">
-      <h2 class="section-title">Como trabalhamos</h2>
-      <div class="grid grid-3">
-        <div class="card"><h3>1. Briefing</h3><p>Entendimento do pedido, prioridade, janelas de tempo e nível de confidencialidade.</p></div>
-        <div class="card"><h3>2. Plano</h3><p>Proposta clara com opções, custos e cronograma. Aprovação rápida.</p></div>
-        <div class="card"><h3>3. Execução</h3><p>Entrega impecável e discreta. Reporting sucinto e registos essenciais apenas.</p></div>
-      </div>
-    </section>
-
-    <!-- LOCALIZAÇÕES -->
-    <section id="local" class="panel">
-      <h2 class="section-title">Onde atuamos</h2>
-      <p>Base no <strong>Algarve</strong> e em <strong>Lisboa</strong>. Operação nacional e Espanha (Andaluzia, Madrid, Barcelona e Baleares).</p>
-    </section>
-
-    <!-- TESTEMUNHOS -->
-    <section id="reviews">
-      <h2 class="section-title">O que dizem</h2>
-      <div class="grid grid-3">
-        <div class="card"><blockquote>“Eficiência cirúrgica com total discreção. Repetiremos.”</blockquote><p class="muted">— Cliente privado, Lisboa</p></div>
-        <div class="card"><blockquote>“Resolução impecável em prazos impossíveis.”</blockquote><p class="muted">— Family Office, Algarve</p></div>
-        <div class="card"><blockquote>“Confiança absoluta. Tudo tratado à medida.”</blockquote><p class="muted">— Executivo, Madrid</p></div>
-      </div>
-    </section>
-
-    <!-- CONFIDENCIALIDADE -->
-    <section id="privacy" class="panel">
-      <h2 class="section-title">Confidencialidade</h2>
-      <p>Sigilo absoluto em todas as fases. <strong>NDAs</strong> e protocolos de acesso sob pedido. Contas-chave atribuídas ao cliente para comunicação direta e segura.</p>
-    </section>
-
-<!-- CONTACTO -->
-<section id="contacto" class="panel" aria-labelledby="contact-heading">
-  <h2 id="contact-heading" class="section-title">Contacto direto</h2>
-  <p class="muted">Preferimos comunicação reservada e objetiva.</p>
-
-  <p>
-    📞 Telefone / WhatsApp: 
-    <a href="https://wa.me/351938569821" target="_blank" rel="noopener">+351 938 569 821</a><br>
-    ✉️ Email: 
-    <a href="mailto:contact@elanconcierge.com">contact@elanconcierge.com</a>
-  </p>
-
-  <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
-    <a class="btn btn--gold" href="mailto:contact@elanconcierge.com">Enviar e-mail</a>
-    <a class="btn" href="https://wa.me/351938569821" target="_blank" rel="noopener">Falar no WhatsApp</a>
-    <a class="btn" href="tel:+351938569821">Ligar agora</a>
-  </div>
-</section>
-
 
     <footer>© ÉLAN Private Concierge — Discrição • Precisão • Excelência</footer>
   </main>
