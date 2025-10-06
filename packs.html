@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Packs ÉLAN — Essencial, Executivo, Signature</title>
+  <meta name="description" content="Packs ÉLAN: Essencial (desde 650 €/mês), Executivo e Signature. Documentação e NDA incluídos. Mais económico do que manter staff fixo.">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0b;--panel:#121212;--card:#161616;--border:#242424;
+      --text:#eaeaea;--muted:#a8a8a8;--gold:#d4af37;--gold2:#b9972e;
+      --r:18px;--shadow:0 10px 32px rgba(0,0,0,.45)
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);
+      font-family:Montserrat,system-ui,Arial;line-height:1.6}
+    a{color:var(--gold);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1120px;margin:0 auto;padding:28px}
+    .btn{padding:10px 16px;border-radius:999px;border:1px solid var(--border);
+      background:var(--card);color:var(--text)}
+    .btn--gold{background:linear-gradient(180deg,var(--gold),var(--gold2));
+      color:#111;border:0;font-weight:800}
+
+    header{text-align:center;padding:70px 20px 40px;
+      background:radial-gradient(1000px 520px at 50% -10%,
+      rgba(0,0,0,.55),rgba(0,0,0,.88));
+      border-bottom:1px solid var(--border)}
+    .logo{height:70px;margin:0 auto 14px;display:block}
+    h1{font-family:"Playfair Display",serif;font-size:42px;color:var(--gold)}
+    .lead{color:#dcdcdc;max-width:780px;margin:10px auto 0;text-align:center}
+    .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+
+    .grid{display:grid;gap:18px}
+    @media(min-width:900px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+    .card{background:linear-gradient(180deg,#161616,#121212);
+      border:1px solid var(--border);border-radius:22px;padding:22px;
+      box-shadow:var(--shadow);position:relative}
+    .badge{position:absolute;top:14px;right:14px;border:1px solid var(--border);
+      padding:6px 10px;border-radius:12px;color:#cfcfcf;font-size:.85rem}
+    .price{font-weight:800;font-size:1.2rem;color:var(--gold);margin:6px 0 10px}
+    h3{margin:6px 0 8px}
+    ul{margin:10px 0 16px;padding-left:18px}
+    li{margin-bottom:8px;color:#dcdcdc}
+    footer{text-align:center;padding:40px 10px;color:var(--muted);
+      border-top:1px solid var(--border);margin-top:32px}
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="elan-logo.png" alt="ÉLAN Concierge">
+    <h1>Packs ÉLAN</h1>
+    <p class="lead">
+      Soluções privadas de alto padrão — mais completas e <strong>até 70% mais económicas</strong>
+      do que manter um mordomo ou staff fixo.
+    </p>
+    <div class="cta">
+      <a class="btn btn--gold" href="mailto:contact@elanconcierge.com?subject=Proposta%20Packs%20ÉLAN">Pedir proposta</a>
+      <a class="btn" href="index.html">Voltar ao site</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid grid-3">
+      <article class="card">
+        <span class="badge">Mais económico</span>
+        <h3>Essencial</h3>
+        <div class="price">desde <strong>650 €/mês</strong></div>
+        <ul>
+          <li>Inspeções semanais e relatórios mensais</li>
+          <li>Supervisão de limpeza e lavandaria</li>
+          <li>Casa pronta à chegada (abastecimento essencial)</li>
+          <li>Gestão de fornecedores e pequenas reparações</li>
+          <li>Gestão de correspondência e encomendas</li>
+          <li>Controlo de energia, climatização e segurança</li>
+          <li>Assistência remota e resposta rápida</li>
+          <li>Documentação + <strong>NDA</strong> incluídos</li>
+        </ul>
+        <div class="cta">
+          <a class="btn btn--gold" href="mailto:contact@elanconcierge.com?subject=Pack%20Essencial">Pedir proposta</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="badge">Sob consulta</span>
+        <h3>Executivo</h3>
+        <div class="price">personalizado</div>
+        <ul>
+          <li>Todos os serviços do Pack Essencial</li>
+          <li>Gestão de agenda e rotinas pessoais</li>
+          <li>Transporte privado (motorista credenciado)</li>
+          <li>Supervisão de fornecedores e staff</li>
+          <li>Planeamento de manutenção e melhorias</li>
+          <li>Documentação + <strong>NDA</strong> incluídos</li>
+        </ul>
+        <div class="cta">
+          <a class="btn btn--gold" href="mailto:contact@elanconcierge.com?subject=Pack%20Executivo">Marcar briefing</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="badge">Sob medida</span>
+        <h3>Signature</h3>
+        <div class="price">por orçamento</div>
+        <ul>
+          <li>Residência + lifestyle integrados</li>
+          <li>Decoração de interiores e obras</li>
+          <li>Eventos privados e curadoria total</li>
+          <li>Acompanhamento alargado / 24×7</li>
+          <li>Equipa dedicada, SLAs e standards</li>
+          <li>Documentação + <strong>NDA</strong> incluídos</li>
+        </ul>
+        <div class="cta">
+          <a class="btn btn--gold" href="mailto:contact@elanconcierge.com?subject=Pack%20Signature">Iniciar proposta</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    © ÉLAN Private Concierge — Discrição • Precisão • Excelência
+  </footer>
+</body>
+</html>
