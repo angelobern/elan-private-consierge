@@ -1,44 +1,80 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; color: #0f172a; background: #ffffff; line-height: 1.6; }
-img { max-width: 100%; display: block; height: auto; }
-a { color: inherit; text-decoration: none; }
-.container { width: min(1100px, 92%); margin: 0 auto; }
-.header { position: sticky; top: 0; z-index: 40; background: #ffffffcc; backdrop-filter: blur(6px); border-bottom: 1px solid #e2e8f0; }
-.nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; gap: 12px; }
-.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
-.brand img { height: 36px; width: auto; }
-.menu { display: flex; gap: 12px; align-items: center; }
-.menu a, .menu button, .menu select { padding: 8px 10px; border-radius: 10px; border: 1px solid transparent; background: transparent; }
-.menu a:hover { background: #f1f5f9; }
-.menu-toggle { display: none; border: 1px solid #cbd5e1; padding: 8px 10px; border-radius: 10px; background: #fff; }
-.lang { border: 1px solid #cbd5e1; background: #fff; }
-.hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: center; padding: 42px 0 24px; }
-h1 { font-size: clamp(28px, 3.2vw + 8px, 48px); line-height: 1.15; letter-spacing: -0.02em; }
-.sub { margin-top: 12px; font-size: 18px; color: #334155; }
-.cta-row { margin-top: 22px; display: flex; gap: 12px; flex-wrap: wrap; }
-.btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 12px; border: 1px solid #0f172a; }
-.btn.primary { background: #0f172a; color: #fff; border-color: #0f172a; }
-.badge { display: inline-block; padding: 6px 10px; font-size: 12px; background: #e2e8f0; border-radius: 999px; margin-bottom: 10px; }
-.section { padding: 48px 0; }
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.card { border: 1px solid #e2e8f0; border-radius: 16px; padding: 18px; background: #fff; }
-.card h3 { font-size: 18px; margin-bottom: 8px; }
-.card p { color: #475569; font-size: 15px; }
-.testi { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.quote { font-style: italic; color: #334155; }
-.stars { margin-top: 8px; }
-.pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.price-card { border: 2px solid #0f172a; border-radius: 18px; padding: 22px; }
-.price { font-size: 34px; font-weight: 800; margin: 10px 0; }
-ul.features { list-style: none; display: grid; gap: 8px; margin: 12px 0 18px; }
-ul.features li::before { content: "• "; color: #0f172a; font-weight: 700; }
-.footer { border-top: 1px solid #e2e8f0; padding: 28px 0; color: #475569; }
-.footer small { display: block; margin-top: 4px; }
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; }
-  .grid-3, .testi, .pricing { grid-template-columns: 1fr; }
-  .menu { display: none; flex-direction: column; padding: 10px 0; align-items: stretch; }
-  .menu.open { display: flex; }
-  .menu-toggle { display: inline-block; }
+/* ---------- Base ---------- */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+  color:#0f172a;background:#fff;line-height:1.65;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(1080px,92%);margin:0 auto}
+
+/* ---------- Header / Nav ---------- */
+.header{
+  position:sticky;top:0;z-index:50;background:#fff;
+  border-bottom:1px solid #e2e8f0;box-shadow:0 2px 10px rgba(15,23,42,.04)
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+.brand img{height:40px;width:auto;filter:drop-shadow(0 1px 0 rgba(0,0,0,.05))}
+.menu{display:flex;gap:18px;align-items:center}
+.menu a{padding:8px 12px;border-radius:10px}
+.menu a:hover{background:#f1f5f9}
+.menu-toggle{display:none;border:1px solid #cbd5e1;padding:8px 10px;border-radius:10px;background:#fff}
+
+/* ---------- Typography ---------- */
+h1{font-size: clamp(30px, 3.2vw + 8px, 56px); line-height:1.12; letter-spacing:-.02em}
+h2{font-size: clamp(22px, 1.2vw + 12px, 28px); line-height:1.2; margin-bottom:6px}
+h3{font-size:18px}
+.sub{margin-top:12px;font-size:17px;color:#334155}
+
+/* ---------- Hero ---------- */
+.hero{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;
+  padding:48px 0 28px
+}
+.hero img{border-radius:18px;box-shadow:0 12px 30px rgba(2,6,23,.08);object-fit:cover}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;
+  border:1px solid #0f172a;transition:transform .06s ease, box-shadow .2s ease, background .2s ease
+}
+.btn.primary{background:#0f172a;color:#fff}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(2,6,23,.08)}
+.cta-row{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.badge{display:inline-block;padding:6px 10px;font-size:12px;background:#e2e8f0;border-radius:999px;margin-bottom:12px}
+
+/* ---------- Sections / Cards ---------- */
+.section{padding:56px 0;border-top:1px solid #f1f5f9}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card, .price-card{
+  border:1px solid #e2e8f0;border-radius:18px;padding:18px;background:#fff;
+  box-shadow:0 6px 18px rgba(2,6,23,.04)
+}
+.card p{color:#475569;font-size:15px}
+
+/* ---------- Pricing ---------- */
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.price{font-size:34px;font-weight:800;margin:10px 0 6px}
+ul.features{list-style:none;display:grid;gap:8px;margin:12px 0 4px}
+ul.features li::before{content:"• ";color:#0f172a;font-weight:700}
+
+/* ---------- Testimonials ---------- */
+.testi{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.quote{font-style:italic;color:#334155}
+.stars{margin-top:8px}
+
+/* ---------- Footer ---------- */
+.footer{border-top:1px solid #e2e8f0;padding:28px 0;color:#475569}
+.footer small{display:block;margin-top:4px}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px){
+  .hero{grid-template-columns:1fr}
+  .grid-3, .testi, .pricing{grid-template-columns:1fr}
+  .menu{display:none;flex-direction:column;padding:10px 0}
+  .menu.open{display:flex}
+  .menu-toggle{display:inline-block}
 }
