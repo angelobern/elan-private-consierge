@@ -1,109 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ÉLAN Private Concierge — Discrição, Precisão, Excelência</title>
-  <meta name="description" content="Serviço exclusivo de concierge e lifestyle de luxo. Gestão de propriedades, viagens e experiências sob medida em Portugal e Espanha.">
-  <meta name="theme-color" content="#0b0b0b" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ÉLAN Private Concierge</title>
   <style>
-    :root {
-      --gold: #d4af37;
-      --gold2: #b9972e;
-      --bg: #0a0a0a;
-      --panel: #121212;
-      --card: #161616;
-      --border: #222;
-      --text: #f5f5f5;
-      --muted: #aaa;
-      --r: 18px;
-      --shadow: 0 10px 30px rgba(0,0,0,.4);
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a { color: var(--gold); text-decoration: none; }
+    body { margin: 0; font-family: Arial, sans-serif; color: white; background-color: black; }
+    header { text-align: center; padding: 60px 20px; background: linear-gradient(180deg, #000, #111); }
+    h1 { font-size: 3em; color: gold; margin: 0; }
+    h2 { color: gold; border-bottom: 1px solid gold; display: inline-block; }
+    p { max-width: 800px; margin: 10px auto; line-height: 1.6; }
+    section { padding: 50px 20px; text-align: center; }
+    footer { text-align: center; padding: 20px; background: #111; color: #999; }
+    a { color: gold; text-decoration: none; font-weight: bold; }
     a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ÉLAN Concierge</h1>
+    <p>The Art of Effortless Living</p>
+  </header>
 
-    /* HEADER */
-    header {
-      text-align: center;
-      padding: 80px 20px 60px;
-      background: radial-gradient(800px 400px at 50% -10%, #1a1a1a, #0a0a0a);
-    }
-    header h1 {
-      font-family: "Playfair Display", serif;
-      color: var(--gold);
-      font-size: 3.2rem;
-      margin: 0;
-      letter-spacing: 3px;
-    }
-    header p {
-      color: var(--muted);
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
+  <section>
+    <h2>Sobre Nós</h2>
+    <p>Serviço de concierge e lifestyle com foco em discrição, precisão e excelência. 
+       Cuidamos de viagens, propriedades e experiências personalizadas em Portugal e Espanha.</p>
+  </section>
 
-    /* NAV */
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      flex-wrap: wrap;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: #111;
-      padding: 14px 10px;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-    }
-    nav a {
-      color: var(--text);
-      font-weight: 500;
-    }
-    nav a:hover { color: var(--gold); }
+  <section>
+    <h2>Serviços</h2>
+    <p>Gestão de propriedades, check-in/out e manutenção<br>
+       Viagens, transfers e reservas premium<br>
+       Eventos discretos e experiências sob medida<br>
+       Assistência 24/7 com sigilo absoluto</p>
+  </section>
 
-    /* CONTENT */
-    main { max-width: 1080px; margin: 0 auto; padding: 40px 20px; }
-    section { margin-bottom: 50px; }
-    h2 {
-      color: var(--gold);
-      font-size: 1.8rem;
-      margin-bottom: 12px;
-    }
+  <section>
+    <h2>Contacto Direto</h2>
+    <p>Telefone / WhatsApp: <a href="tel:+351938569821">+351 938 569 821</a><br>
+       Email: <a href="mailto:contact@elanconcierge.com">contact@elanconcierge.com</a></p>
+  </section>
 
-    p, li { color: var(--text); }
-
-    ul { padding-left: 22px; }
-
-    .img-cover {
-      border-radius: var(--r);
-      border: 1px solid var(--border);
-      min-height: 280px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      margin: 25px 0;
-      box-shadow: var(--shadow);
-    }
-    @media (min-width: 780px) { .img-cover { min-height: 420px; } }
-
-    .contact-box {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: var(--r);
-      paddi
+  <footer>
+    © ÉLAN Private Concierge — Discrição • Precisão • Excelência
+  </footer>
+</body>
+</html>
